@@ -97,8 +97,5 @@ pyvenv.cfg
 # Sublime Text 3 configration files
 *.sublime*
 
-# Dockerfile
-Dockerfile
-
 # pip-selfcheck.json
 pip-selfcheck.json
