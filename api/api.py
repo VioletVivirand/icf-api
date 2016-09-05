@@ -2,7 +2,8 @@
 from flask import Flask, redirect, abort, send_from_directory
 from flask_cors import CORS, cross_origin
 from flask_restful import Resource, Api, reqparse, abort
-from createjson import createjson
+# from createjson_disabilities import createjson
+from createjson_prevalence import createjson
 
 app = Flask(__name__)
 cors = CORS(app, resources={

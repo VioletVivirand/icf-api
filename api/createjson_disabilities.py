@@ -2,9 +2,15 @@ import pandas as pd
 import numpy as np
 from flask_restful import abort
 
-dt_dict = {'age': np.int8, 'description': object, 's7_class_codet': object, 's7_level_code': object, 'sex': object, 'TOWN': object}
-data = pd.read_csv('./dataset.csv', dtype=dt_dict)
+data_dtypes = {'age': np.int8, 'description': object, 's7_class_codet': object, 's7_level_code': object, 'sex': object, 'TOWN': object}
+data = pd.read_csv('./dataset.csv', dtype=data_dtypes)
 
+pops_dtypes = {'CITYNAME': object, 'TOWNNAME': object, 'TOTAL': np.int32 ,'MALE': np.int32, 'FEMALE': np.int32, 'TOWN': object}
+pops = pd.read_csv('./town_pops.csv', dtype=pops_dtypes)
+
+# Test with: 
+# testargs = {'sex': '1', 'smallerAge': 18, 'biggerAge': 30, 'level': '1,2', 'codet': '1,2,3,4,5,6,7,8,9', 'desc': ''}
+# createjson(testargs)
 def createjson(args):
     cons = []
 

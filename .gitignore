@@ -99,3 +99,6 @@ pyvenv.cfg
 
 # pip-selfcheck.json
 pip-selfcheck.json
+
+# Snippets
+snippets/
